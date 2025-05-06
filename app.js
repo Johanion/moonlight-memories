@@ -7,6 +7,10 @@ require("dotenv").config();
 const app = express(); 
 const port = 3000;
 
+// cors policy might block api request
+const cors = require('cors');
+app.use(cors());
+
 
 // Serve static files from the "public" folder
 app.use(express.static("public")); // to access static files from folder public

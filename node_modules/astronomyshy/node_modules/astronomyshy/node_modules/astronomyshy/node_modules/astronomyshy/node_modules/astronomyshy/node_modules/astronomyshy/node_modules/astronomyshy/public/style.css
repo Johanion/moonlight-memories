@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+:root {
+  --bg-color: #0b0c2a;
+  --text-color: #ffffff;
+  --button-bg: rgba(255, 255, 255, 0.1);
+  --button-hover: rgba(255, 255, 255, 0.3);
+  --bg-image: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80');
+}
+
+body.light {
+  --bg-color: #f5f5f5;
+  --text-color: #0b0c2a;
+  --button-bg: rgba(0, 0, 0, 0.05);
+  --button-hover: rgba(0, 0, 0, 0.15);
+  --bg-image: url('https://images.unsplash.com/photo-1604079628045-b688b3a6f2e5?auto=format&fit=crop&w=1950&q=80');
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-theme input {
+  display: none;
+}
+
+.toggle-theme label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.toggle-theme label:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  text-align: center;
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Shared styling for inputs and selects */
+.input-group input,
+.input-group select {
+  background: var(--button-bg);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.input-group input:hover,
+.input-group select:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Layout for the manual coordinates inputs */
+#manualInputs {
+  /* Remove default flex display */
+  display: none;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+#manualInputs input {
+  width: 100%;
+  max-width: 140px;
+  cursor: text;
+}
+
+
+/* to change light<=>dark mode */
+
+body.light-theme {
+  background: white;
+  color: black;
+}
+
+body.dark-theme {
+  background: #111;
+  color: white;
+}
+
+
+
+/* Styling for the location selection buttons */
+.location-btn {
+  background-color: #6c63ff;  /* Soft purple background */
+  color: white;
+  border: none;
+  border-radius: 50px;  /* Rounded buttons */
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  margin: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 220px;  /* Same width for both buttons */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+}
+
+/* Hover effect: Slightly darker shade and lift */
+.location-btn:hover {
+  background-color: #5b53e0;  /* Slightly darker purple on hover */
+  transform: translateY(-5px);  /* Smooth lift effect */
+}
+
+/* Active effect: Return to normal position */
+.location-btn:active {
+  transform: translateY(0);
+}
+
+/* Styling for the submit button */
+.submit-btn {
+  background-color: #6c63ff;  /* Matching color for consistency */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 30px;
+  width: 250px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+}
+
+/* Hover effect for submit button */
+.submit-btn:hover {
+  background-color: #5b53e0;
+  transform: translateY(-5px);
+}
+
+/* Active effect for submit button */
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+
+/* final button */
+
+#finalButton {
+  background-color: #4CAF50;  /* Green background */
+  color: white;               /* White text */
+  padding: 12px 24px;         /* Vertical and horizontal padding */
+  border: none;               /* No border */
+  border-radius: 6px;         /* Rounded corners */
+  cursor: pointer;            /* Pointer on hover */
+  font-size: 16px;            /* Text size */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;  /* Slightly darker on hover */
+}

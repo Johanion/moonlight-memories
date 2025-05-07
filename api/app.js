@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 
 // routing to the page
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 // Handle form submission
@@ -146,13 +146,13 @@ app.post("/", async function (req, res) {
   }
 });
 
-// // Start the server
+// Start the server
 // app.listen(port, function () {
 //   console.log("Server is running on port 3000.");
 // });
 
 
-
+// start the server
 const serverless = require("serverless-http");
 module.exports = serverless(app);
 

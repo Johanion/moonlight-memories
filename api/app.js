@@ -6,7 +6,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express(); 
-// const port = 3000;
+const port = 3000;
 
 
 
@@ -147,9 +147,9 @@ app.post("/", async function (req, res) {
 });
 
 // Start the server
-// app.listen(port, function () {
-//   console.log("Server is running on port 3000.");
-// });
+app.listen(port, function () {
+  console.log("Server is running on port 3000.");
+});
 
 
 // start the server

@@ -2,6 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios"); // to make requests for API
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express(); 
@@ -19,7 +20,7 @@ app.use(bodyParser.json());
 
 // routing to the page
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 // Handle form submission
@@ -137,14 +138,14 @@ app.post("/", async function (req, res) {
   }
 });
 
-// Start the server
-app.listen(port, function () {
-  console.log("Server is running on port 3000.");
-});
+// // Start the server
+// app.listen(port, function () {
+//   console.log("Server is running on port 3000.");
+// });
 
 
 
-
+module.exports= app;
 
 
 
